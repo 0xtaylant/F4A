@@ -4,7 +4,7 @@ import Radioblock from '/components/radioblock.jsx';
 import RadioBar from '/components/RadioBar.jsx';
 import Playpause from '/components/playpause.jsx';
 import { PlayIcon } from '@heroicons/react/24/solid';
-import { AiOutlineMenu, AioutlineClose } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -58,27 +58,27 @@ const Navbar = () => {
                 </li>
             </ul>
             
-            <div className="block sm:hidden z-10" > 
-                {nav ? <AioutlineClose size={20}/> : <AiOutlineMenu size={20}/> }
+            <div onClick={handleNav} className="block sm:hidden z-10" > 
+                {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/> }
             </div>
             <div className={nav 
-                        ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-f4a-green text-center ease-in duration-300 " 
+                        ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full bg-f4a-green text-center ease-in duration-300 h-[100vh]" 
                         : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-f4a-green text-center ease-in duration-300"}>
-                <ul className="flex flex-wrap text-base">
+                <ul className="flex flex-col text-base">
                     <li className="p-4 text-4xl hover:text-f4a-orange">
-                        <Link className="px-5 py-2 hover:red" href="/home"> Home </Link>
+                        <Link onClick={handleNav} className="px-5 py-2 hover:red" href="/home"> Home </Link>
                     </li>
                     <li className="p-4 text-4xl hover:text-f4a-orange">
-                        <Link className="px-5 py-2 hover:text-red" href="/livesets"> Livesets </Link>
+                        <Link onClick={handleNav} className="px-5 py-2 hover:text-red" href="/livesets"> Livesets </Link>
                     </li>
                     <li className="p-4 text-4xl hover:text-f4a-orange">
-                        <Link className="px-5 py-2 hover:text-red" href="/archive"> Archive </Link>
+                        <Link onClick={handleNav} onClick={handleNav} className="px-5 py-2 hover:text-red" href="/archive"> Archive </Link>
                     </li>
                     <li className="p-4 text-4xl hover:text-f4a-orange">
-                        <Link className="px-5 py-2 hover:text-red" href="/events"> Events </Link>
+                        <Link onClick={handleNav} className="px-5 py-2 hover:text-red" href="/events"> Events </Link>
                     </li>
                     <li className="p-4 text-4xl hover:text-f4a-orange">
-                        <Link className="px-5 py-2 hover:text-red" href="/about"> About </Link>
+                        <Link onClick={handleNav} className="px-5 py-2 hover:text-red" href="/about"> About </Link>
                     </li>
                 </ul>
                 
@@ -86,6 +86,7 @@ const Navbar = () => {
           </nav>
           <RadioBar/>
     </div>
+
   );
 };
 

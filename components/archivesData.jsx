@@ -1,7 +1,7 @@
 export const archives = [
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -9,7 +9,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -17,7 +17,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -25,7 +25,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -33,7 +33,7 @@ export const archives = [
     },
     {
         id: 6,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -41,7 +41,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -49,7 +49,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -57,7 +57,7 @@ export const archives = [
     },
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -65,7 +65,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -73,7 +73,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -81,7 +81,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -89,7 +89,7 @@ export const archives = [
     },
     {
         id: 6,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -97,7 +97,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -105,7 +105,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -113,7 +113,7 @@ export const archives = [
     },
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -121,7 +121,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -129,7 +129,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -137,7 +137,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -145,7 +145,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -153,7 +153,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -161,7 +161,7 @@ export const archives = [
     },
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -169,7 +169,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -177,7 +177,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -185,7 +185,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -193,7 +193,7 @@ export const archives = [
     },
     {
         id: 6,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -201,7 +201,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -209,7 +209,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -217,7 +217,7 @@ export const archives = [
     },
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -225,7 +225,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -233,7 +233,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -241,7 +241,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -249,7 +249,7 @@ export const archives = [
     },
     {
         id: 6,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -257,7 +257,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -265,7 +265,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -273,7 +273,7 @@ export const archives = [
     },
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -281,7 +281,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -289,7 +289,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -297,7 +297,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -305,7 +305,7 @@ export const archives = [
     },
     {
         id: 6,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -313,7 +313,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -321,7 +321,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -329,7 +329,7 @@ export const archives = [
     },
     {
         id: 1,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -337,7 +337,7 @@ export const archives = [
     },
     {
         id: 2,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -345,7 +345,7 @@ export const archives = [
     },
     {
         id: 3,
-        imageUrl: '/host4.jpeg',
+        image: '/host4.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -353,7 +353,7 @@ export const archives = [
     },
     {
         id: 4,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -361,7 +361,7 @@ export const archives = [
     },
     {
         id: 6,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -369,7 +369,7 @@ export const archives = [
     },
     {
         id: 7,
-        imageUrl: '/host6.jpeg',
+        image: '/host6.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',
@@ -377,7 +377,7 @@ export const archives = [
     },
     {
         id: 8,
-        imageUrl: '/host5.jpeg',
+        image: '/host5.jpeg',
         hostName: 'METZ',
         location: 'ISTANBUL',
         showName: 'TWISTED DREAM DIARY',

@@ -5,11 +5,15 @@ import Grid from "../../components/Grid";
 import { archives } from "../../components/archivesData";
 import Image from "next/image";
 import Footer from "../../components/Footer";
+import Slider2 from "../../components/Slider2";
+import { SliderData } from "../../components/SliderData";
+import "swiper/css";
+import dynamic from "next/dynamic";
 
 function Home() {
 	return (
 		<div className="w-screen h-max bg-white relative ">
-			<div className="bg-white w-[100%] h-[32vh] relative">
+			<div className="bg-white w-[100%] h-[32vh] sm:h-[44vh] md:h-[55-vh] lg:h-[66vh] xl:h-[77vh] 2xl:h-[88vh] relative">
 				<Image src={"/flyer2crop2.png"} alt="/" fill />
 			</div>
 
@@ -40,23 +44,37 @@ function Home() {
 								</div>
 							</div>
 						</div>
-						<div className="absolute w-[78%] h-[90%] bg-f4a-lily ml-2 mb-12 rounded-3xl ">
-                        
-                        </div>
+						<div className="absolute w-[78%] h-[90%] bg-f4a-lily ml-2 mb-12 rounded-3xl "></div>
 						<div className="w-[64px] h-[64px] bg-f4a-gray absolute right-0 mb-14 justify-end aspect-w-1 aspect-h-1 "></div>
 					</div>
 					<div className="border-b-2 border-f4a-gray w-[100%] mx-auto mb-4%]" />
 					<p className="text-4xl w-[100%] m-auto my-8 text-f4a-gray font-Anton">
 						FREE4ALL
 					</p>
-					<div className="w-[100%]">
-						<Grid items={archives} className="" />
+					<div className="h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
+						<Slider2 slides={archives}></Slider2>
 					</div>
-
-					
+					<div className="h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
+						<Slider2 slides={archives}></Slider2>
+					</div>
+					<div className="w-[100%] h-[50vh] bg-f4a-transparent mt-8">
+						<div className='h-[50%] bg-f4a-orange rounded-b-xl'></div>
+						<div className='h-[50%]'>
+						<img
+							src="/flyer2crop2.png"
+							alt="/"
+							loading="lazy"
+							style={{
+								objectFit: "cover",
+								width: "100%",
+								height: "100%",
+							}}
+						/>
+						</div>
+					</div>
+					<Footer></Footer>
 				</div>
 			</div>
-            
 		</div>
 	);
 }

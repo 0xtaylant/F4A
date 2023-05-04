@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 
-const GridItem = ({ imageUrl, hostName, location, showName, date }) => {
+const GridItem = ({ image, hostName, location, showName, date }) => {
   const [hovered, setHovered] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -23,7 +23,7 @@ const GridItem = ({ imageUrl, hostName, location, showName, date }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Image src={imageUrl} alt="/" layout="fill" objectFit="cover" />
+      <Image src={image} alt="/" layout="fill" objectFit="cover" />
       {!hovered && (
         <div className="absolute inset-0 flex flex-col place-items-start justify-end pl-[6%] mb-[4%]">
           <p className="text-white text-xs sm:text-sm md:text-xs lg:text-sm font-thin font-Anton">
@@ -50,7 +50,7 @@ const GridItem = ({ imageUrl, hostName, location, showName, date }) => {
           className="fixed top-0 left-0 w-screen h-screen bg-black z-50 flex items-center justify-center"
           onClick={handleCloseFullscreen}
         >
-          <Image src={imageUrl} alt="/" layout="fill" objectFit="cover" className="absolute top-0 left-0 w-full h-full mt-4" />
+          <Image src={image} alt="/" layout="fill" objectFit="cover" className="absolute top-0 left-0 w-full h-full mt-4" />
           <div className="absolute bottom-0 left-0 bg-white w-600px h-400px p-4">
             <p className="text-black font-semibold font-Anton">
               {hostName}, {showName}
@@ -84,7 +84,7 @@ const Grid = ({ items }) => {
         {items.map((item) => (
             <div key={item.id}>
             <GridItem
-                imageUrl={item.imageUrl}
+                image={item.image}
                 hostName={item.hostName}
                 location={item.location}
                 showName={item.showName}
