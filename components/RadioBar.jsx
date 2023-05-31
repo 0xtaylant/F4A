@@ -13,6 +13,9 @@ const RadioBar = () => {
     
     return (
         <div className=' flex bg-f4a-lily w-[30%] h-[80%] items-center ml-auto mr-4 rounded-3xl drop-shadow-md shadow-f4a-gray'>
+            <audio autoPlay>
+                <source src='/Tower Block Dreams - Gut Feeling [www.slider.kz].mp3' type="audio/"/>   
+            </audio>
             <button
                 onClick={togglePlayPause}
                 className=' bg-f4a-lily rounded-full focus:outline-none left-0 pl-6'>
@@ -22,7 +25,7 @@ const RadioBar = () => {
                 className={isPlaying ? "text-f4a-green" : "text-f4a-green"}
                 />
             </button>
-            <div className='pl-4 text-start w-[90%] font-Anton overflow-hidden block hidden'>
+            <div className='pl-4 text-start w-[90%] font-Anton overflow-hidden block'>
                 <Marquee speed="50"> 
                     SW?TCH - NIGHTMARES AND LIGTHERS
                 </Marquee>

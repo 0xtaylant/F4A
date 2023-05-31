@@ -9,6 +9,7 @@ import Slider2 from "../../components/Slider2";
 import { SliderData } from "../../components/SliderData";
 import "swiper/css";
 import dynamic from "next/dynamic";
+import AudioPlayer from '../../components/audioPlayer.jsx'
 
 function Home() {
 	return (
@@ -58,23 +59,30 @@ function Home() {
 						<Slider2 slides={archives}></Slider2>
 					</div>
 					<div className="w-[100%] h-[50vh] bg-f4a-transparent mt-8">
-						<div className='h-[50%] bg-f4a-orange rounded-b-xl'></div>
-						<div className='h-[50%]'>
-						<img
-							src="/flyer2crop2.png"
-							alt="/"
-							loading="lazy"
-							style={{
-								objectFit: "cover",
-								width: "100%",
-								height: "100%",
-							}}
-						/>
+						<div className="h-[50%] bg-f4a-orange rounded-b-xl"></div>
+						<div className="h-[50%]">
+							<img
+								src="/flyer2crop2.png"
+								alt="/"
+								loading="lazy"
+								style={{
+									objectFit: "cover",
+									width: "100%",
+									height: "100%",
+								}}
+							/>
 						</div>
 					</div>
+
 					<Footer></Footer>
 				</div>
+
 			</div>
+			<AudioPlayer
+						src="/Tower Block Dreams - Gut Feeling [www.slider.kz].mp3"
+						trackName="Tower Block Dreams Show"
+						imgSrc='/img11.JPG'
+					/>
 		</div>
 	);
 }
