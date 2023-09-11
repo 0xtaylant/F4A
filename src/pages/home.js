@@ -79,7 +79,7 @@ function Home() {
 
 			</div>
 			<AudioPlayer
-						src="/Tower Block Dreams - Gut Feeling [www.slider.kz].mp3"
+						filename="DemoSongs/Song1.mp3"
 						trackName="Tower Block Dreams Show"
 						imgSrc='/img11.JPG'
 					/>

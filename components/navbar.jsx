@@ -72,7 +72,7 @@ const Navbar = () => {
                         <Link onClick={handleNav} className="px-5 py-2 hover:text-red" href="/livesets"> Livesets </Link>
                     </li>
                     <li className="p-4 text-4xl hover:text-f4a-orange">
-                        <Link onClick={handleNav} onClick={handleNav} className="px-5 py-2 hover:text-red" href="/archive"> Archive </Link>
+                        <Link onClick={handleNav} className="px-5 py-2 hover:text-red" href="/archive"> Archive </Link>
                     </li>
                     <li className="p-4 text-4xl hover:text-f4a-orange">
                         <Link onClick={handleNav} className="px-5 py-2 hover:text-red" href="/events"> Events </Link>
