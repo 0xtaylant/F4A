@@ -1,35 +1,54 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
-import { faHeart as fasfaHeart } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as farfaHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as fasfaHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as farfaHeart } from "@fortawesome/free-regular-svg-icons";
+import { getImageURL } from "../helper/s3"; // Import the getImageURL function
 
 function formatTime(time) {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
 function AudioPlayer({ filename, trackName, imgSrc }) {
-    const [playing, setPlaying] = useState(false);
-    const [progress, setProgress] = useState(0);
-    const [liked, setLiked] = useState(false);
-    const [playingContent, setPlayingContent] = useState(trackName);
-    const [signedURL, setSignedURL] = useState(null);
-    const audioRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [liked, setLiked] = useState(false);
+  const [playingContent, setPlayingContent] = useState(trackName);
+  const [signedURL, setSignedURL] = useState(null);
+  const [signedImageURL, setSignedImageURL] = useState(null);
+  const audioRef = useRef(null);
 
-    useEffect(() => {
-        async function fetchSignedURL() {
-            try {
-                const response = await fetch(`/api/getAudioURL?filename=${filename}`);
-                const data = await response.json();
-                setSignedURL(data.url);
-            } catch (error) {
-                console.error('Error fetching signed URL:', error);
-            }
-        }
-        fetchSignedURL();
-    }, [filename]);
+  useEffect(() => {
+    async function fetchAudioSignedURL() {
+      try {
+        const response = await fetch(`/api/getAudioURL?filename=${filename}`);
+        const data = await response.json();
+        setSignedURL(data.url);
+      } catch (error) {
+        console.error("Error fetching audio signed URL:", error);
+      }
+    }
+
+    async function fetchImageSignedURL() {
+        try {
+            const response = await fetch(`/api/getImageURL?filename=${imgSrc}`);
+            const data = await response.json();
+            setSignedImageURL(data.url);
+            
+          } catch (error) {
+            console.error("Error fetching image signed URL:", error);
+            throw error;
+          }
+    }
+
+
+
+    fetchAudioSignedURL();
+    fetchImageSignedURL(); // Fetch image URL
+
+  }, [filename, imgSrc]);
 
     useEffect(() => {
         if (!audioRef.current && signedURL) {
@@ -84,7 +103,7 @@ function AudioPlayer({ filename, trackName, imgSrc }) {
 
     return (
         <div className="fixed bottom-0 bg-black text-white w-[720px] h-16 flex items-center z-50">
-            <img src={imgSrc} alt={trackName} className="h-16 w-16" />
+            <img src={signedImageURL} className="h-16 w-16"/>
             <button onClick={togglePlayPause} className="bg-black rounded-full focus:outline-none ml-4 h-16 w-16 flex items-center justify-center">
                 <FontAwesomeIcon icon={playing ? faPause : faPlay} size="lg" className="text-white" />
             </button>

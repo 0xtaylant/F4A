@@ -81,9 +81,12 @@ function Home() {
 			<AudioPlayer
 						filename="DemoSongs/Song1.mp3"
 						trackName="Tower Block Dreams Show"
-						imgSrc='/img11.JPG'
+						imgSrc="DemoSongs/tou.jpeg"
 					/>
+			
+			
 		</div>
+		
 	);
 }
 
