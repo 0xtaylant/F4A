@@ -26,9 +26,11 @@ export default function App({ Component, pageProps }: AppProps) {
 			
 
 			
-
-			
-			
+    <AudioPlayer
+						filename="DemoSongs/Song1.mp3"
+						trackName="Tower Block Dreams Show"
+						imgSrc="DemoSongs/tou.jpeg"
+					/>
 		</div>
       <Component {...pageProps} />
     </>
