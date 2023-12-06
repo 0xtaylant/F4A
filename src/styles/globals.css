@@ -49,6 +49,15 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   }
 
+  .project-info-card-item {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: blue;
+
+}
   
 
   

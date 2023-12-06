@@ -3,6 +3,7 @@ import "swiper/swiper.min.css";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Breakpoints } from "swiper";
+import Image from "next/image";
 
 SwiperCore.use([Breakpoints]);
 
@@ -33,21 +34,18 @@ const Slider2 = ({ slides }) => {
       }}
     >
       {slides.map((slide) => (
-        <SwiperSlide key={slide.image}>
-          <div className="h-[100%] w-[100%] bg-black rounded-2xl relative overflow-hidden">
-            <img
-              src={slide.image}
-              alt="/"
-              loading="lazy"
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </div>
-        </SwiperSlide>
-      ))}
+				<SwiperSlide key={slide}>
+					<div className="project-info-card-item">
+						<div className="bg-red-400 h-max w-[100%] overflow-hidden mb-2">
+              <Image fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" style={{objectFit:"contain"}} src={slide.image}></Image>
+            </div>
+						<div className="bg-transparent h-[4%] w-[100%]">
+							<text className="project-text">sdfasdf</text>
+						</div>
+						<div className="project-type-text">asdf</div>
+					</div>
+				</SwiperSlide>
+			))}
     </Swiper>
   );
 };

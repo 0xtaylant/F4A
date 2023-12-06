@@ -35,8 +35,8 @@ const Navbar = () => {
         scrolled ? 'bg-white shadow-f4a-gray shadow-md' : ' bg-transparent text-white'
       }`}
     >
-        <div className= "ml-8 bg-white">
-            <img src="/f4a-logo.png" width={48} height={32}/>
+        <div className= "ml-8 bg-transparent">
+            <img src={scrolled ? "/F4A_RGB_Logo-03.svg" : "/F4A_RGB_Logo-01.svg"} width={48} height={32}/>
         </div>
         <nav className={`lg:block flex items-center justify-items-start ${
             scrolled ? 'text-black' : 'text-white'} hover:text-red ml-8 `}>

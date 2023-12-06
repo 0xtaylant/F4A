@@ -26,6 +26,33 @@ export const archives = [
         date: '29.03.2023',
         trackName: 'Song3'
     },
+    {
+        id: 4,
+        image: '/host6.jpeg',
+        hostName: 'METZ',
+        location: 'ISTANBUL',
+        showName: '3    DIARY',
+        date: '29.03.2023',
+        trackName: 'Song3'
+    },
+    {
+        id: 4,
+        image: '/host6.jpeg',
+        hostName: 'METZ',
+        location: 'ISTANBUL',
+        showName: '3    DIARY',
+        date: '29.03.2023',
+        trackName: 'Song3'
+    },
+    {
+        id: 4,
+        image: '/host6.jpeg',
+        hostName: 'METZ',
+        location: 'ISTANBUL',
+        showName: '3    DIARY',
+        date: '29.03.2023',
+        trackName: 'Song3'
+    },
 
   ];
 
