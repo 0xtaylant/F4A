@@ -20,27 +20,26 @@ function Home() {
 	const [demoImages, setDemoImages] = useState([]);
   
 	useEffect(() => {
-	  // Fetch demo sets
-	  listFilesInDirectory('DemoSets/')
-		.then(files => {
-		  // Process the list to fit the Slider2 component's expected format
-		  const formattedSetFiles = files.map(file => ({ /* format as needed, e.g., {image: url, title: ...} */ }));
-		  setDemoSets(formattedSetFiles);
-		  console.log('bbbbbbbbbbb',formattedSetFiles);
-		})
-		.catch(console.error);
-  
-	  // Fetch demo images
-	  listFilesInDirectory('DemoImages/')
-		.then(files => {
-		  // Similar processing as above
-		  const formattedImageFiles = files.map(file => ({ /* format as needed */ }));
-		  setDemoImages(formattedImageFiles);
-		  console.log('aaaaaaaaa',formattedImageFiles);
-		})
-		.catch(console.error);
-	}, []);
-
+		// Fetch demo sets
+		fetch(`/api/listFiles?directory=DemoSets/`)
+		  .then(response => response.json())
+		  .then(data => {
+			const formattedSetFiles = data.files.map(file => ({ /* format as needed */ }));
+			setDemoSets(formattedSetFiles);
+			console.log('bbbbbbbbbbb',formattedSetFiles);
+		  })
+		  .catch(console.error);
+	  
+		// Fetch demo images
+		fetch(`/api/listFiles?directory=DemoImages/`)
+		  .then(response => response.json())
+		  .then(data => {
+			const formattedImageFiles = data.files.map(file => ({ /* format as needed */ }));
+			setDemoImages(formattedImageFiles);
+		  })
+		  .catch(console.error);
+	  }, []);
+	  
 
 	return (
 		<div className="w-screen h-auto bg-f4a-transparent flex flex-col ">
@@ -64,7 +63,7 @@ function Home() {
 						<Slider2 slides={demoImages}></Slider2>
 					</div>
 					<div className="h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
-						<Slider2 slides={archives}></Slider2>
+						{/* <Slider2 slides={archives}></Slider2> */}
 					</div>
 					<div className="border-b-2 border-f4a-gray w-[100%] mx-auto mb-4% pt-8" />
 					<div className="bg-transparent flex flex-row">
