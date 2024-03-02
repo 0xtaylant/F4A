@@ -26,3 +26,12 @@ export const getImageURL = (imgSrc) => {
 
   return s3.getSignedUrl('getObject', params);
 };
+
+export const getFilesURL = () => {
+  const params = {
+    Bucket: process.env.AWS_BUCKET_NAME,
+    Expires: 3600 // URL expires in 1 hour
+  };
+
+  return s3.getSignedUrl('getObject', params);
+};

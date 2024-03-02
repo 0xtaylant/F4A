@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import ImageCarousel from "components/imageCarousel.jsx";
 import AnimatedGrid from "../../components/AnimatedGrid";
@@ -10,8 +11,37 @@ import { SliderData } from "../../components/SliderData";
 import "swiper/css";
 import dynamic from "next/dynamic";
 import AudioPlayer from "../../components/audioPlayer.jsx";
+import React, { useState, useEffect } from 'react';
+import { listFilesInDirectory } from './api/listFilesInDirectory.js';
 
 function Home() {
+
+	const [demoSets, setDemoSets] = useState([]);
+	const [demoImages, setDemoImages] = useState([]);
+  
+	useEffect(() => {
+	  // Fetch demo sets
+	  listFilesInDirectory('DemoSets/')
+		.then(files => {
+		  // Process the list to fit the Slider2 component's expected format
+		  const formattedSetFiles = files.map(file => ({ /* format as needed, e.g., {image: url, title: ...} */ }));
+		  setDemoSets(formattedSetFiles);
+		  console.log('bbbbbbbbbbb',formattedSetFiles);
+		})
+		.catch(console.error);
+  
+	  // Fetch demo images
+	  listFilesInDirectory('DemoImages/')
+		.then(files => {
+		  // Similar processing as above
+		  const formattedImageFiles = files.map(file => ({ /* format as needed */ }));
+		  setDemoImages(formattedImageFiles);
+		  console.log('aaaaaaaaa',formattedImageFiles);
+		})
+		.catch(console.error);
+	}, []);
+
+
 	return (
 		<div className="w-screen h-auto bg-f4a-transparent flex flex-col ">
 			<div className="bg-black w-[100%] min-h-[32vh] sm:min-h-[44vh] md:min-h-[55-vh] lg:min-h-[57vh] xl:min-h-[66vh] 2xl:min-h-[55vh] relative">
@@ -31,7 +61,7 @@ function Home() {
 					</div>
 
 					<div className="h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
-						<Slider2 slides={archives}></Slider2>
+						<Slider2 slides={demoImages}></Slider2>
 					</div>
 					<div className="h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
 						<Slider2 slides={archives}></Slider2>
@@ -43,9 +73,9 @@ function Home() {
 						</p>
 					</div>
 
-					<div className="min-h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
+					{/* <div className="min-h-[36vh] w-[100%] bg-transparent flex scroll mt-8 justify-center">
 						<Slider2 slides={archives}></Slider2>
-					</div>
+					</div> */}
 					
 					<Footer />
 				</div>

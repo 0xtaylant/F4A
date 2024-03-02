@@ -34,10 +34,10 @@ const Slider2 = ({ slides }) => {
       }}
     >
       {slides.map((slide) => (
-				<SwiperSlide key={slide}>
+				<SwiperSlide >
 					<div className="project-info-card-item">
 						<div className="bg-red-400 h-max w-[100%] overflow-hidden mb-2">
-              <Image fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" style={{objectFit:"contain"}} src={slide.image}></Image>
+              <Image alt="img" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" style={{objectFit:"contain"}} src={slide.image}></Image>
             </div>
 						<div className="bg-transparent h-[4%] w-[100%]">
 							<text className="project-text">sdfasdf</text>
