@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
-
-module.exports = {
+  images: {
+    domains: ['free4alldemo1.s3.eu-central-1.amazonaws.com'],
+  },
   async redirects() {
     return [
       {
@@ -11,6 +11,8 @@ module.exports = {
         destination: '/home',
         permanent: true,
       },
-    ]
+    ];
   },
-}
+};
+
+module.exports = nextConfig;
